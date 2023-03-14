@@ -85,24 +85,11 @@ To use the Password Generator application, follow these steps:
 ![image](https://user-images.githubusercontent.com/120603153/224890999-ccbb0272-a7f1-412c-8b71-ad678a4b7b5c.png)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - Once you have made your selections, a new password will be generated and displayed on the page.
 
 - You can copy the password to your clipboard by clicking the "Copy to Clipboard" button
-Features
+Features.
+
 - The Password Generator application includes the following features:
 
 - User input validation to ensure the selected password length is between 8 and 128 characters.
@@ -115,5 +102,4 @@ Features
 
 - The ability to copy the generated password to the clipboard for easy use.
 
-## Gr
 

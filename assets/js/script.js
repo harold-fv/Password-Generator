@@ -95,3 +95,47 @@ function generatePassword() {
 
 }
 
+
+// declare global variable to hold the password length
+var passwordLength;
+
+function askForLength() {
+  while (true) {
+    // 1. Shows a prompt to ask the user to input a desired length
+    var inputLength = window.prompt(
+      "Enter a number that will indicate the length of your password"
+    );
+
+    // 2. If the user clicks Ok without inputting anything, the prompt reappears to ask the user again for a valid length.
+    if (inputLength === null) {
+        return;
+      }
+  
+      // 3. If the user inputs a text that contains letters and numbers, the letters are removed leaving only the numbers.
+      // Such numbers are stored in a variable named 'passwordLength'.
+      passwordLength = parseInt(inputLength);
+  
+      // 4. Checks if passwordLength is trully a number using isNAN.
+  
+      // If passwordLength is not a number at all (INVALID PASSWORD LENGTH)
+      if (isNaN(passwordLength)) {
+        window.alert("That is not a number!");
+      }
+      // else, if the number is noth within 8 and 128 (INVALID PASSWORD LENGTH)
+      else if (passwordLength < 8 || passwordLength > 128) {
+        window.alert("Password length must be between 8 and 128 characters.");
+      }
+      // else, shows criteria checkboxes (VALID PASSWORD LENGTH)
+      else {
+        // to show criteria checkboxes, the class 'hide' is removed from the 'criteria-container' div
+        // var element = document.getElementById("criteria-container");
+        break;
+      }
+    }
+  }
+  
+  
+  
+  // Add event listener to generate button
+  generateBtn.addEventListener("click", writePassword);
+  
